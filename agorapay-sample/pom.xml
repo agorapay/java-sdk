@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.agorapay</groupId>
+	<artifactId>agorapay-sample</artifactId>
+	<version>1.0.0</version>
+
+	<properties>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+
+		<httpclient5-version>5.2.1</httpclient5-version>
+		<jackson-version>2.18.2</jackson-version>
+		<jackson-databind-nullable-version>0.2.6</jackson-databind-nullable-version>
+		<logback-core.version>1.5.18</logback-core.version>
+		<slf4j-api.version>2.0.17</slf4j-api.version>
+	</properties>
+
+	<dependencies>
+		<!-- SDK AgoraPay mis en dur -->
+		<dependency>
+			<groupId>com.agorapay</groupId>
+			<artifactId>agorapay-sdk</artifactId>
+			<version>1.10.5.1</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/libs/agorapay-sdk-1.10.5.1.jar</systemPath>
+		</dependency>
+
+		<!-- HTTP client: apache client -->
+		<dependency>
+			<groupId>org.apache.httpcomponents.client5</groupId>
+			<artifactId>httpclient5</artifactId>
+			<version>${httpclient5-version}</version>
+		</dependency>
+
+		<!-- Logs -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>${logback-core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback-core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j-api.version}</version>
+		</dependency>
+
+		<!-- Jackson -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jsr310</artifactId>
+			<version>${jackson-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.openapitools</groupId>
+			<artifactId>jackson-databind-nullable</artifactId>
+			<version>${jackson-databind-nullable-version}</version>
+		</dependency>
+	</dependencies>
+
+</project>
