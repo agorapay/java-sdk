@@ -7,6 +7,8 @@ import com.agorapay.client.model.AccountHolderRegisterRequest;
 import com.agorapay.client.model.AccountHolderRegisterRequest.RegulatedSocietyEnum;
 import com.agorapay.client.model.AccountHolderRegisterRequestOwner;
 import com.agorapay.client.model.AccountHolderRegisterRequestOwner.GenderEnum;
+import com.agorapay.client.model.AccountHolderRegisterResponse;
+import com.agorapay.client.model.AccountHolderUploadDocumentRequest;
 import com.agorapay.client.model.Amount;
 import com.agorapay.client.model.Breakdown;
 import com.agorapay.client.model.Capture;
@@ -22,14 +24,17 @@ import com.agorapay.client.model.PaymentResponse;
 import com.agorapay.client.model.RegisterAccount;
 import com.agorapay.client.model.RegisterAddress;
 import com.agorapay.client.model.RegisterPersonRequest;
-import com.agorapay.client.model.RegisterPersonRequestRolesInner;
-import com.agorapay.client.model.RegisterPersonRequestRolesInner.RoleEnum;
+import com.agorapay.client.model.RequirementUploadRequest;
+import com.agorapay.client.model.RolesInner;
 import org.apache.hc.client5.http.utils.Base64;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.time.LocalDate;
 import java.util.stream.Collectors;
+
+import static com.agorapay.client.model.RequirementUploadRequest.FileTypeEnum.QUESTIONNAIRE;
 
 public class AgoraPaySdkSample {
 
@@ -58,8 +63,11 @@ public class AgoraPaySdkSample {
         // Exemple d'appel du ticket de paiement
         testTicket();
 
-		// Exemple d'enregistrement d'un client
-		testRegisterPersonRequest();
+		// Exemple d'enregistrement d'un client + upload des documents légaux
+		var registerPersonResponse = testRegisterPersonRequest();
+		// Upload d'un des documents demandés dans la réponse à l'enregistrement d'un nouveau client
+		var requirement = registerPersonResponse.getRequirements().stream().filter(r -> r.getCode().equals(QUESTIONNAIRE.getValue())).findFirst().get();
+		testUploadDocument(registerPersonResponse.getRequestId(), requirement.getId(), RequirementUploadRequest.FileTypeEnum.fromValue(requirement.getCode()));
     }
 
     // Initialisation d'un paiement
@@ -108,7 +116,7 @@ public class AgoraPaySdkSample {
         System.out.println(response);
     }
 
-	public static void testRegisterPersonRequest() throws ApiException {
+	public static AccountHolderRegisterResponse testRegisterPersonRequest() throws ApiException {
 
 		var person = new RegisterPersonRequest()
 				.firstName("prenom")
@@ -117,7 +125,7 @@ public class AgoraPaySdkSample {
 				.birthDate(LocalDate.of(1990, 1, 1))
 				.email("noml.prenom@mail.com")
 				.phoneNumber("+33612345678")
-				.addRolesItem(new RegisterPersonRequestRolesInner().role(RoleEnum.CP));
+				.addRolesItem(new RolesInner().role(RolesInner.RoleEnum.CP));
 
 		var account = new RegisterAccount()
 				.country("FRA")
@@ -155,7 +163,22 @@ public class AgoraPaySdkSample {
 				.turnover("1000.00")
 				;
 
-		apiInstance.accountHolderRegisterPost(accountHolderRequest);
+		return apiInstance.accountHolderRegisterPost(accountHolderRequest);
+	}
+
+	public static void testUploadDocument(String requestId, String requirementId, RequirementUploadRequest.FileTypeEnum fileType) throws ApiException {
+		var requirement = new RequirementUploadRequest()
+				.id(requirementId)
+				.fileType(fileType);
+
+		var document = new AccountHolderUploadDocumentRequest()
+				.requestId(requestId)
+				.addRequirementsItem(requirement);
+
+		// Remplacer par le chemin du fichier à uploader
+		var file = new File("ticket.pdf");
+
+		apiInstance.accountHolderUploadDocumentPost(document, file);
 	}
 
 	public static void testTicket() throws ApiException {

@@ -8,6 +8,7 @@
 	<version>1.0.0</version>
 
 	<properties>
+		<sdk.version>1.11.3.1</sdk.version>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 
@@ -23,9 +24,9 @@
 		<dependency>
 			<groupId>com.agorapay</groupId>
 			<artifactId>agorapay-sdk</artifactId>
-			<version>1.10.5.1</version>
+			<version>${sdk.version}</version>
 			<scope>system</scope>
-			<systemPath>${project.basedir}/libs/agorapay-sdk-1.10.5.1.jar</systemPath>
+			<systemPath>${project.basedir}/libs/agorapay-sdk-${sdk.version}.jar</systemPath>
 		</dependency>
 
 		<!-- HTTP client: apache client -->
