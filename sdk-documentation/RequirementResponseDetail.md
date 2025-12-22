@@ -13,6 +13,7 @@ Requirement for registration
 |**label** | **String** | Requirement description |  |
 |**status** | **String** | Document status- Missing - Incomplete - To validate - Validated - To sign - Forced - To read - To screen - Supervise  |  [optional] |
 |**documents** | [**List&lt;RequirementResponseDetailDocument&gt;**](RequirementResponseDetailDocument.md) | List of documents |  [optional] |
+|**code** | **String** | Requirement code identification |  [optional] |
 
 
 
