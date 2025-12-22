@@ -13,8 +13,8 @@ Start register new account holder response
 |**requestId** | **String** | Id used for futher update function call |  [optional] |
 |**accountNumber** | **String** | A string representing the account number. |  [optional] |
 |**paymentMethodAlias** | **String** | Alias identifying a previously registered payment method. |  [optional] |
-|**requirements** | [**List&lt;RequirementResponse&gt;**](RequirementResponse.md) |  |  [optional] |
-|**physicalPersons** | [**List&lt;RegisterPersonResponse&gt;**](RegisterPersonResponse.md) |  |  [optional] |
+|**requirements** | [**List&lt;RequirementResponseDetail&gt;**](RequirementResponseDetail.md) |  |  [optional] |
+|**physicalPersons** | [**List&lt;RegisterPersonResponseDetail&gt;**](RegisterPersonResponseDetail.md) |  |  [optional] |
 |**status** | **String** | Document status- Missing - Incomplete - To validate - Validated - To sign - Forced - To read - To screen - Supervise  |  [optional] |
 
 
