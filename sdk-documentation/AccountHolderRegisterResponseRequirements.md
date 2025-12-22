@@ -1,6 +1,6 @@
 
 
-# RequirementResponseDetail
+# AccountHolderRegisterResponseRequirements
 
 Requirement for registration
 
