@@ -206,7 +206,7 @@ public class Example {
 
 ## accountHolderRegistrationDetailsGet
 
-> AccountHolderRegisterResponse accountHolderRegistrationDetailsGet(requestId)
+> AccountHolderRegistrationDetailsResponse accountHolderRegistrationDetailsGet(requestId)
 
 
 
@@ -241,7 +241,7 @@ public class Example {
         DefaultApi apiInstance = new DefaultApi(defaultClient);
         String requestId = "requestId=2176372"; // String | Registration request identifier
         try {
-            AccountHolderRegisterResponse result = apiInstance.accountHolderRegistrationDetailsGet(requestId);
+            AccountHolderRegistrationDetailsResponse result = apiInstance.accountHolderRegistrationDetailsGet(requestId);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#accountHolderRegistrationDetailsGet");
@@ -263,7 +263,7 @@ public class Example {
 
 ### Return type
 
-[**AccountHolderRegisterResponse**](AccountHolderRegisterResponse.md)
+[**AccountHolderRegistrationDetailsResponse**](AccountHolderRegistrationDetailsResponse.md)
 
 ### Authorization
 

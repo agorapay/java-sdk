@@ -20,6 +20,7 @@ Criteria to list operation
 |**paymentMethodKey** | **PaymentMethodKey** |  |  [optional] |
 |**sellerAccountNumber** | **String** | Account number of the merchant or marketplace. |  [optional] |
 |**parentAccountNumber** | **String** | A string representing the account number. |  [optional] |
+|**internalRemittance** | **String** | Internal Remittance information |  [optional] |
 
 
 

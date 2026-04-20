@@ -10,7 +10,7 @@ Payout auto request
 |------------ | ------------- | ------------- | -------------|
 |**accountNumber** | **String** | A string representing the account number. |  |
 |**amount** | **String** | Recharge amount |  |
-|**frequency** | [**FrequencyEnum**](#FrequencyEnum) | 0: deactivate 1: once a day 2: once a week 3: once a month 10: automatic on threshold |  |
+|**frequency** | [**FrequencyEnum**](#FrequencyEnum) | 0: deactivate 1: once a day 2: once a week 3: once a month 10: automatic on threshold 11: On cashing |  |
 |**dayOfWeek** | [**DayOfWeekEnum**](#DayOfWeekEnum) | Selected day of the week. Between 0 and 6 If frequency is set to 2, dayOfWeek is a mandatory field. 0: Sunday 1: Monday 2: Tuesday 3: Wednesday 4: Thursday 5: Friday 6: Saturday |  [optional] |
 |**dayOfMonth** | [**DayOfMonthEnum**](#DayOfMonthEnum) | Selected day of the month. Between 1 and 31. If frequency is set to 3, dayOfMonth is a mandatory field |  [optional] |
 |**paymentMethodAlias** | **String** | Alias identifying a previously registered payment method. |  |
@@ -26,6 +26,7 @@ Payout auto request
 | _2 | &quot;2&quot; |
 | _3 | &quot;3&quot; |
 | _10 | &quot;10&quot; |
+| _11 | &quot;11&quot; |
 
 
 

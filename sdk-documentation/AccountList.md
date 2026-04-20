@@ -16,6 +16,7 @@ Account information
 |**payoutAuto** | **String** | 1 if payout auto activated |  [optional] |
 |**floorLimit** | **String** | Minimum amount for payout auto |  [optional] |
 |**reference** | **String** | Account reference |  [optional] |
+|**iban** | **String** | IBAN of the account |  [optional] |
 
 
 

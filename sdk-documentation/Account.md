@@ -17,6 +17,7 @@ Account information
 |**floorLimit** | **String** | Minimum amount for payout auto |  [optional] |
 |**balance** | **String** | Account balance |  [optional] |
 |**availableBalance** | **String** | Avalibale balance is the balance minus the floor limit.  Set to 0 if result is negative |  [optional] |
+|**reference** | **String** | Account reference |  [optional] |
 
 
 

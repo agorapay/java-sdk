@@ -23,9 +23,19 @@ Start register new account holder request
 |**commercialAddress** | [**RegisterAddress2**](RegisterAddress2.md) |  |  [optional] |
 |**turnover** | **String** | Current or last year turnover in account currency code unit |  |
 |**regulatedSociety** | [**RegulatedSocietyEnum**](#RegulatedSocietyEnum) | Y or N |  |
+|**usPerson** | **UsPerson** |  |  |
 |**physicalPersons** | [**List&lt;OnlineRegisterPersonRequest&gt;**](OnlineRegisterPersonRequest.md) | At least one person must be provided with CP role |  |
 |**account** | [**RegisterAccount2**](RegisterAccount2.md) |  |  |
 |**owner** | [**AccountHolderOnlineRegisterRequestOwner**](AccountHolderOnlineRegisterRequestOwner.md) |  |  |
+|**introducerRiskLevel** | **String** | Vigilance level |  |
+|**introducerRiskScore** | **String** | Scoring |  [optional] |
+|**taxAddress** | [**TaxAddress**](TaxAddress.md) |  |  [optional] |
+|**riskCountry** | [**List&lt;RiskCountryInner&gt;**](RiskCountryInner.md) | For all countries considered high-risk where the client operates and carries out activities. |  [optional] |
+|**countryPurchase** | [**List&lt;CountryPurchaseInner&gt;**](CountryPurchaseInner.md) |  |  [optional] |
+|**specificOperation** | [**SpecificOperation**](SpecificOperation.md) |  |  [optional] |
+|**licensedOperation** | [**LicensedOperation**](LicensedOperation.md) |  |  [optional] |
+|**introducerLastKYCReview** | **LocalDate** | Introducer last KYC review in YYYYMMDD format |  [optional] |
+|**channel** | **Channel** |  |  [optional] |
 
 
 

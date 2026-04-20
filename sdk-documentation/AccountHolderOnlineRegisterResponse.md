@@ -13,6 +13,8 @@ Start register new account holder response
 |**sellerReference** | **String** | Agorapay holder reference |  [optional] |
 |**requestId** | **String** | Request identifier for the enrollment |  [optional] |
 |**tokenId** | **String** | Id used for futher update function call |  [optional] |
+|**externalReference** | **String** | External holder reference |  [optional] |
+|**accountNumber** | **String** | A string representing the account number. |  [optional] |
 
 
 

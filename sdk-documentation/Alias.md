@@ -12,7 +12,7 @@ Alias description
 |**expirationDate** | **String** | format MMYY |  [optional] |
 |**maskedPan** | **String** | Hidden card number or IBAN |  [optional] |
 |**label** | **String** | label of the alias |  [optional] |
-|**brand** | **String** | Card brand (CB, VISA, MASTERCARD) or bank code for IBAN |  [optional] |
+|**cardBrand** | **String** | Card brand (CB, VISA, MASTERCARD) or bank code for IBAN |  [optional] |
 |**bankCode** | **String** |  |  [optional] |
 
 
