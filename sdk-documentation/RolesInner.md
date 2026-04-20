@@ -8,7 +8,7 @@ Physical person role
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**role** | [**RoleEnum**](#RoleEnum) | Role of a physical person - BE : Beneficial owner - D : Manager - MD : Mandatary - CP : Legal representative - PR : Profession Réglementée |  [optional] |
+|**role** | [**RoleEnum**](#RoleEnum) | Role of a physical person - BE : Beneficial owner - D : Manager - MD : Mandatary - CP : Legal representative - PR : Regulated Profession |  [optional] |
 
 
 

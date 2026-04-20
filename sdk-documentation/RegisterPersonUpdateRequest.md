@@ -15,7 +15,8 @@ Person information for register update
 |**email** | **String** |  |  [optional] |
 |**phoneNumber** | **String** |  |  [optional] |
 |**roles** | [**List&lt;RolesInner&gt;**](RolesInner.md) |  |  |
-|**birthDate** | **LocalDate** | Date of birth in YYYYMMAA format |  [optional] |
+|**birthDate** | **LocalDate** | Date of birth in YYYYMMDD format |  [optional] |
+|**physicalAddress** | [**PhysicalAddress**](PhysicalAddress.md) |  |  [optional] |
 
 
 

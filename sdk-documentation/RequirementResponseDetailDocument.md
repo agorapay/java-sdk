@@ -15,6 +15,7 @@ Document requirement for registration in response
 |**validated** | **String** | Y or N |  [optional] |
 |**fileType** | **String** |  |  [optional] |
 |**validateDate** | **String** | Date of validation of the document in ISO8601 format |  [optional] |
+|**reason** | **String** | Operation label transmitted in payment system. Maximum length of 140 characters. |  [optional] |
 
 
 
